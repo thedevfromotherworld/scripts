@@ -1,0 +1,13 @@
+local HttpService = game:GetService("HttpService")
+local url = "https://raw.githubusercontent.com/thedevfromotherworld/scripts/main/thisin"
+
+local success, scriptContent = pcall(function()
+	return HttpService:GetAsync(url)
+end)
+
+if success and scriptContent then
+	print("Script fetched successfully:")
+	print(scriptContent)  -- See what we got from GitHub
+else
+	warn("Failed to fetch script from GitHub")
+end
