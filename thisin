@@ -1,1 +1,3 @@
-print("This is from GitHub")
+return function()
+    print("This is from GitHub!")
+end
